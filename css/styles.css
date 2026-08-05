@@ -1,0 +1,828 @@
+/* ==========================================
+   TASKFLOW - STYLES.CSS
+   PART 1
+========================================== */
+
+/* ==========================================
+   CSS VARIABLES
+========================================== */
+
+:root{
+
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+    --secondary:#0f172a;
+
+    --success:#22c55e;
+    --warning:#f59e0b;
+    --danger:#ef4444;
+
+    --background:#f3f6fb;
+
+    --white:#ffffff;
+
+    --text:#1e293b;
+
+    --text-light:#64748b;
+
+    --border:#dbe4ee;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+    --radius:15px;
+
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+
+    font-family:inherit;
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header{
+
+    background:linear-gradient(135deg,
+    var(--primary),
+    var(--primary-dark));
+
+    color:white;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.logo{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.logo i{
+
+    margin-right:10px;
+
+}
+
+header p{
+
+    opacity:.9;
+
+}
+
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.dashboard{
+
+    width:90%;
+
+    margin:30px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+
+/* ==========================================
+   DASHBOARD CARD
+========================================== */
+
+.card{
+
+    background:var(--white);
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+    border:1px solid var(--border);
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.card i{
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    font-size:1rem;
+
+    color:var(--text-light);
+
+    margin-bottom:10px;
+
+}
+
+.card h2{
+
+    font-size:2rem;
+
+    color:var(--secondary);
+
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container{
+
+    width:90%;
+
+    margin:auto;
+
+    margin-bottom:40px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+
+/* ==========================================
+   GLASS CARD
+========================================== */
+
+.glass{
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:25px;
+
+}
+
+.glass h2{
+
+    margin-bottom:20px;
+
+    color:var(--secondary);
+
+}
+
+.glass h2 i{
+
+    color:var(--primary);
+
+    margin-right:10px;
+
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+input,
+
+textarea,
+
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    outline:none;
+
+    margin-bottom:18px;
+
+    font-size:.95rem;
+
+    font-family:inherit;
+
+    transition:.3s;
+
+    background:white;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+}
+
+input:focus,
+
+textarea:focus,
+
+select:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+
+/* ==========================================
+   INPUT ROW
+========================================== */
+
+.row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+button i{
+
+    margin-right:8px;
+
+}
+/* ==========================================
+   TASK CONTAINER
+========================================== */
+
+#taskContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+/* ==========================================
+   EMPTY MESSAGE
+========================================== */
+
+.empty{
+
+    text-align:center;
+
+    color:var(--text-light);
+
+    padding:30px 0;
+
+    font-size:1rem;
+
+}
+
+
+/* ==========================================
+   TASK CARD
+========================================== */
+
+.task{
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-left:6px solid var(--primary);
+
+    border-radius:12px;
+
+    padding:20px;
+
+    transition:.3s;
+
+}
+
+.task:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* ==========================================
+   COMPLETED TASK
+========================================== */
+
+.task.completed{
+
+    border-left-color:var(--success);
+
+    opacity:.85;
+
+}
+
+.task.completed h3{
+
+    text-decoration:line-through;
+
+}
+
+
+/* ==========================================
+   TASK TITLE
+========================================== */
+
+.task h3{
+
+    color:var(--secondary);
+
+    margin-bottom:10px;
+
+}
+
+
+/* ==========================================
+   TASK DESCRIPTION
+========================================== */
+
+.task p{
+
+    color:var(--text-light);
+
+    line-height:1.6;
+
+    margin-bottom:15px;
+
+}
+
+
+/* ==========================================
+   TASK INFO
+========================================== */
+
+.task-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+    font-size:.9rem;
+
+    color:var(--text-light);
+
+}
+
+
+/* ==========================================
+   PRIORITY BADGES
+========================================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.high{
+
+    background:var(--danger);
+
+}
+
+.medium{
+
+    background:var(--warning);
+
+}
+
+.low{
+
+    background:var(--success);
+
+}
+
+
+/* ==========================================
+   TASK BUTTONS
+========================================== */
+
+.task-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.task-buttons button{
+
+    flex:1;
+
+    padding:10px;
+
+    font-size:.9rem;
+
+}
+
+
+/* ==========================================
+   COMPLETE BUTTON
+========================================== */
+
+.complete-btn{
+
+    background:var(--success);
+
+}
+
+.complete-btn:hover{
+
+    background:#16a34a;
+
+}
+
+
+/* ==========================================
+   EDIT BUTTON
+========================================== */
+
+.edit-btn{
+
+    background:#f59e0b;
+
+}
+
+.edit-btn:hover{
+
+    background:#d97706;
+
+}
+
+
+/* ==========================================
+   DELETE BUTTON
+========================================== */
+
+.delete-btn{
+
+    background:var(--danger);
+
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+
+}
+
+
+/* ==========================================
+   FILTER BUTTONS
+========================================== */
+
+.filter-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.filter-buttons button{
+
+    flex:1;
+
+}
+
+
+/* ==========================================
+   TOAST
+========================================== */
+
+#toast{
+
+    position:fixed;
+
+    top:30px;
+
+    right:30px;
+
+    background:var(--success);
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:10px;
+
+    box-shadow:var(--shadow);
+
+    opacity:0;
+
+    transform:translateX(200px);
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:var(--text-light);
+
+    font-size:.9rem;
+
+}
+
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#e2e8f0;
+
+}
+
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.task{
+
+    animation:fadeIn .3s ease;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .dashboard{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .row{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .task-info{
+
+        flex-direction:column;
+
+    }
+
+    .task-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .filter-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .logo{
+
+        font-size:1.6rem;
+
+    }
+
+    .card h2{
+
+        font-size:1.6rem;
+
+    }
+
+}

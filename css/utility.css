@@ -1,0 +1,271 @@
+/* ==========================================
+   TASKFLOW - UTILITY CLASSES
+   ========================================== */
+
+/* ==========================================
+   MARGIN
+   ========================================== */
+
+.m-1 {
+    margin: 10px;
+}
+
+.m-2 {
+    margin: 20px;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.ml-1 {
+    margin-left: 10px;
+}
+
+.ml-2 {
+    margin-left: 20px;
+}
+
+.mr-1 {
+    margin-right: 10px;
+}
+
+.mr-2 {
+    margin-right: 20px;
+}
+
+/* ==========================================
+   PADDING
+   ========================================== */
+
+.p-1 {
+    padding: 10px;
+}
+
+.p-2 {
+    padding: 20px;
+}
+
+.pt-1 {
+    padding-top: 10px;
+}
+
+.pb-1 {
+    padding-bottom: 10px;
+}
+
+.pl-1 {
+    padding-left: 10px;
+}
+
+.pr-1 {
+    padding-right: 10px;
+}
+
+/* ==========================================
+   DISPLAY
+   ========================================== */
+
+.flex {
+    display: flex;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.grid {
+    display: grid;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ==========================================
+   FLEX
+   ========================================== */
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+/* ==========================================
+   GAP
+   ========================================== */
+
+.gap-1 {
+    gap: 10px;
+}
+
+.gap-2 {
+    gap: 20px;
+}
+
+.gap-3 {
+    gap: 30px;
+}
+
+/* ==========================================
+   WIDTH
+   ========================================== */
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+/* ==========================================
+   TEXT
+   ========================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+/* ==========================================
+   BORDER RADIUS
+   ========================================== */
+
+.rounded-sm {
+    border-radius: 8px;
+}
+
+.rounded {
+    border-radius: 12px;
+}
+
+.rounded-lg {
+    border-radius: 20px;
+}
+
+.rounded-full {
+    border-radius: 999px;
+}
+
+/* ==========================================
+   SHADOW
+   ========================================== */
+
+.shadow-sm {
+    box-shadow: 0 3px 8px rgba(0,0,0,.10);
+}
+
+.shadow {
+    box-shadow: 0 6px 15px rgba(0,0,0,.15);
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 25px rgba(0,0,0,.20);
+}
+
+/* ==========================================
+   CURSOR
+   ========================================== */
+
+.pointer {
+    cursor: pointer;
+}
+
+/* ==========================================
+   OVERFLOW
+   ========================================== */
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+/* ==========================================
+   POSITION
+   ========================================== */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* ==========================================
+   TRANSITION
+   ========================================== */
+
+.transition {
+    transition: 0.3s;
+}

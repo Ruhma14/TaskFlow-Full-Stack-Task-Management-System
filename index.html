@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | Task Management System</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    
+
+</head>
+
+<body>
+
+   
+  <!-- HEADER -->
+  
+    <header>
+
+        <div class="logo flex justify-center items-center gap-1">
+
+            <i class="fa-solid fa-list-check"></i>
+
+            <h1>TaskFlow</h1>
+
+        </div>
+
+        <p>Organize your work efficiently</p>
+
+    </header>
+
+          <!-- DASHBOARD -->
+
+    <section class="dashboard">
+
+        <div class="card">
+
+            <i class="fa-solid fa-list"></i>
+
+            <h3>Total Tasks</h3>
+
+            <h2 id="totalTasks">0</h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h3>Completed</h3>
+
+            <h2 id="completedTasks">0</h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Pending</h3>
+
+            <h2 id="pendingTasks">0</h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Completion</h3>
+
+            <h2 id="completionRate">0%</h2>
+
+        </div>
+
+    </section>
+
+
+          <!-- MAIN CONTAINER -->
+
+    <main class="container">
+
+        <!-- LEFT SIDE -->
+
+        <section class="left">
+
+            <!-- ADD TASK -->
+
+            <div class="glass">
+
+                <h2>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add New Task
+
+                </h2>
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Task Title">
+
+                <textarea
+                    id="description"
+                    rows="4"
+                    placeholder="Task Description"></textarea>
+
+                <div class="row">
+
+                    <input
+                        type="date"
+                        id="dueDate">
+
+                    <select id="priority">
+
+                        <option value="High">High</option>
+
+                        <option value="Medium">Medium</option>
+
+                        <option value="Low">Low</option>
+
+                    </select>
+
+                </div>
+
+                <div class="row">
+
+                    <select id="category">
+
+                        <option value="Study">Study</option>
+
+                        <option value="Work">Work</option>
+
+                        <option value="Personal">Personal</option>
+
+                        <option value="Shopping">Shopping</option>
+
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                </div>
+
+                <button id="addTaskBtn" class="shadow transition">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Task
+
+                </button>
+
+            </div>
+
+
+
+            <!-- SEARCH -->
+
+            <div class="glass mt-2">
+
+                <h2>
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Search
+
+                </h2>
+
+                <input
+                    type="text"
+                    id="searchTask"
+                    placeholder="Search tasks...">
+
+            </div>
+
+
+
+            <!-- FILTER -->
+
+            <div class="glass">
+
+                <h2>
+
+                    <i class="fa-solid fa-filter"></i>
+
+                    Filter
+
+                </h2>
+
+                <div class="filter-buttons">
+
+                    <button id="allBtn" class="transition">All</button>
+
+                    <button id="pendingBtn" class="transition">Pending</button>
+
+                    <button id="completedBtn" class="transition">Completed</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <section class="right">
+
+            <div class="glass">
+
+                <h2>
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    My Tasks
+
+                </h2>
+
+                <div id="taskContainer" class="mt-2">
+
+                    <p class="empty">
+
+                        No tasks available.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- TOAST -->
+     <div id="toast" class="rounded"></div>
+
+    <!-- FOOTER -->
+
+    <footer class="mt-2">
+        <p>
+
+            © 2026 TaskFlow
+
+        </p>
+
+        <p>
+
+            Built with ❤️ using HTML, CSS & JavaScript by Ruhma
+
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
