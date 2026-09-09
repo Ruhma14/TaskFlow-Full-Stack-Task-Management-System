@@ -1,171 +1,418 @@
-# 📋 taskflow-workspace
+# 🚀 TaskFlow — Full-Stack Task Management System
 
-A modern and responsive Task Management System built using **HTML**, **CSS**, and **JavaScript**.
+TaskFlow is a modern, responsive full-stack Task Management System designed to help users create, organize, track, complete, search, and manage their daily tasks.
 
-TaskFlow allows users to create, organize, complete, search, and manage daily tasks with automatic Local Storage support.
-
----
-
-## 🚀 Live Demo
-
-https://github.com/Ruhma14/taskflow-workspace
+The project started as a frontend-based task manager using Local Storage and has been extended into a full-stack application using **Node.js, Express.js, MongoDB, and Mongoose** with a RESTful API.
 
 ---
 
-## 📸 Screenshots
+## ✨ Features
 
-### Home
+### Task Management
 
-![Home](assets/screenshots/home.png)
+* Create new tasks
+* View all tasks
+* Mark tasks as completed or pending
+* Delete tasks
+* Persistent task storage using MongoDB
+* Task priority management
+* Task categories
+* Due dates
 
----
+### Search & Filtering
 
-### Add Task
+* Search tasks by title
+* Search tasks by description
+* Search tasks by category
+* Filter all tasks
+* Filter pending tasks
+* Filter completed tasks
 
-![Add Task](assets/screenshots/add-task.png)
+### Dashboard
 
----
+* Total tasks
+* Completed tasks
+* Pending tasks
+* Completion percentage
+* Real-time dashboard updates
 
-### Completed Task
+### User Interface
 
-![Completed](assets/screenshots/completed-task.png)
-
----
-
-### Search
-
-![Search](assets/screenshots/search.png)
-
----
-
-### Filter
-
-![Filter](assets/screenshots/filter.png)
-
----
-
-### Mobile View
-
-![Mobile](assets/screenshots/mobile-view.png)
-
----
-
-# ✨ Features
-
-- Add New Task
-- Delete Task
-- Mark Task as Completed
-- Search Tasks
-- Filter Tasks
-- Dashboard Statistics
-- Completion Percentage
-- Local Storage Support
-- Responsive Design
-- Toast Notifications
-- Modern User Interface
+* Modern responsive design
+* Mobile-friendly layout
+* Toast notifications
+* Clean task cards
+* Priority badges
+* Responsive dashboard
+* User-friendly task management interface
 
 ---
 
-# 🛠 Technologies Used
+## 🛠️ Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
-- Local Storage API
-- Font Awesome
-- Google Fonts
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+* Fetch API
+* DOM Manipulation
+
+### Backend
+
+* Node.js
+* Express.js
+* REST API
+* CORS
+* dotenv
+
+### Database
+
+* MongoDB
+* Mongoose
+* MongoDB Compass
+
+### API Testing
+
+* Postman
+
+### Development Tools
+
+* Visual Studio Code
+* Git
+* GitHub
+* Node.js
 
 ---
 
-# 📂 Project Structure
+## 🏗️ Application Architecture
 
+```text
+┌─────────────────────────┐
+│        Frontend         │
+│    HTML / CSS / JS      │
+└────────────┬────────────┘
+             │
+             │ Fetch API
+             ▼
+┌─────────────────────────┐
+│       REST API          │
+│   Node.js + Express     │
+└────────────┬────────────┘
+             │
+             │ Mongoose
+             ▼
+┌─────────────────────────┐
+│        MongoDB          │
+│       taskflow-DB       │
+└─────────────────────────┘
 ```
+
+MongoDB is the main source of truth for task data.
+
+---
+
+## 📂 Project Structure
+
+```text
 TaskFlow/
-
 │
-
 ├── assets/
-
-│ └── screenshots/
-
+│   └── screenshots/
 │
-
 ├── css/
-
-│ ├── styles.css
-
-│ └── utility.css
-
+│   ├── styles.css
+│   └── utility.css
 │
-
 ├── js/
-
-│ ├── script.js
-
-│ └── storage.js
-
+│   └── script.js
 │
-
+├── backend/
+│   ├── .env
+│   ├── .gitignore
+│   ├── server.js
+│   │
+│   ├── models/
+│   │   └── task.model.js
+│   │
+│   └── routes/
+│       └── task.routes.js
+│
 ├── index.html
-
+├── package.json
+├── package-lock.json
 └── README.md
 ```
 
 ---
 
-# 💡 JavaScript Concepts Used
+## 🔌 REST API Endpoints
 
-- Variables
-- Arrays
-- Objects
-- Functions
-- DOM Manipulation
-- Event Listeners
-- CRUD Operations
-- Local Storage
-- Array Methods
-- Filter()
-- Includes()
-- Dynamic HTML Rendering
+Base URL:
+
+```text
+http://localhost:5000/api/tasks
+```
+
+### Get all tasks
+
+```http
+GET /api/tasks
+```
+
+Returns all tasks from MongoDB.
+
+### Get a single task
+
+```http
+GET /api/tasks/:id
+```
+
+Returns a specific task using its MongoDB ID.
+
+### Create a task
+
+```http
+POST /api/tasks
+```
+
+Example request:
+
+```json
+{
+  "title": "Learn Express",
+  "description": "Practice REST API development",
+  "dueDate": "2026-09-20",
+  "priority": "High",
+  "category": "Learning"
+}
+```
+
+### Update a task
+
+```http
+PUT /api/tasks/:id
+```
+
+Example:
+
+```json
+{
+  "completed": true
+}
+```
+
+### Delete a task
+
+```http
+DELETE /api/tasks/:id
+```
 
 ---
 
-# 🎯 Learning Outcomes
+## ⚙️ Installation
 
-While building this project I learned:
+### 1. Clone the repository
 
-- Creating responsive layouts
-- Working with Local Storage
-- Building CRUD applications
-- Managing application state
-- JavaScript DOM manipulation
-- Organizing code into separate files
-- Writing reusable CSS
+```
 
----
+### 2. Open the project
 
-# 📈 Future Improvements
+```bash
+cd taskflow-fullstack
+```
 
-- Edit Tasks
-- Sort Tasks
-- Dark Mode
-- Drag and Drop
-- Categories with Colors
-- Due Date Notifications
+### 3. Install dependencies
+
+```bash
+npm install
+```
 
 ---
 
-# 👩‍💻 Author
+## 🗄️ MongoDB Setup
 
-**Ruhma Naseer**
+Make sure MongoDB is installed and running locally.
 
-Software Engineering Student
+The application uses:
 
-GitHub:
-https://github.com/Ruhma14
+```text
+Database: taskflow
+Collection: tasks
+```
+
+Create:
+
+```text
+backend/.env
+```
+
+with:
+
+```env
+MONGO_URI=mongodb://127.0.0.1:27017/taskflow
+PORT=5000
+```
+
 
 ---
 
-# ⭐ Show your support
+## ▶️ Run the Application
 
-If you like this project, consider giving it a ⭐ on GitHub.
+Start the backend from the project root:
+
+```bash
+npm run dev
+```
+
+Expected output:
+
+```text
+MongoDB connected!
+Server running on port 5000
+```
+
+The API is available at:
+
+```text
+http://localhost:5000
+```
+
+---
+
+## 🧪 Testing
+
+The REST API can be tested using Postman.
+
+### API Testing Flow
+
+```text
+POST
+  ↓
+Create Task
+  ↓
+MongoDB
+  ↓
+GET
+  ↓
+Display Tasks
+```
+
+Update:
+
+```text
+PUT
+  ↓
+Update Task
+  ↓
+MongoDB
+```
+
+Delete:
+
+```text
+DELETE
+  ↓
+Remove Task
+  ↓
+MongoDB
+```
+
+MongoDB Compass can be used to verify database documents directly.
+
+---
+
+## 🔄 Frontend Data Flow
+
+TaskFlow no longer depends on Local Storage for task persistence.
+
+The current data flow is:
+
+```text
+User
+ ↓
+Frontend
+ ↓
+Fetch API
+ ↓
+Express REST API
+ ↓
+Mongoose
+ ↓
+MongoDB
+```
+
+When the page loads, tasks are retrieved from MongoDB through the API.
+
+---
+
+## 📊 Dashboard
+
+The dashboard dynamically calculates:
+
+* Total tasks
+* Completed tasks
+* Pending tasks
+* Completion rate
+
+The dashboard updates whenever tasks are created, completed, or deleted.
+
+---
+
+## 📱 Responsive Design
+
+TaskFlow is designed to work across:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile devices
+
+---
+
+## 🎯 Learning Outcomes
+
+This project provided practical experience with:
+
+* Frontend development
+* Responsive web design
+* JavaScript DOM manipulation
+* Event handling
+* CRUD operations
+* REST API development
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* API integration
+* Fetch API
+* Postman API testing
+* MongoDB Compass
+* Git and GitHub
+* Full-stack application architecture
+
+---
+
+## 🚀 Future Improvements
+
+Possible future improvements include:
+
+* User authentication
+* JWT-based authentication
+* User-specific tasks
+* Edit task functionality
+* Task sorting
+* Dark mode
+* Drag and drop task management
+* Due-date notifications
+* Task pagination
+* Deployment
+* Cloud MongoDB integration
+* Production environment configuration
+
+---
+
+
+## ⭐ Support
+
+If you find this project useful, consider giving the repository a star ⭐
